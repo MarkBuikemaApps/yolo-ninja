@@ -15,7 +15,7 @@ public class GameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         view = new GLGameView(this);
-        renderer = new GLGameRenderer(this);
+        renderer = new GLGameRenderer();
         view.setRenderer(renderer);
         
         view.setKeepScreenOn(BuildConfig.DEBUG);
