@@ -1,4 +1,4 @@
-package com.marktim.kutspel2.view;
+package com.marktim.kutspel2.opengl;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;

@@ -3,7 +3,7 @@ package com.marktim.kutspel2;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.marktim.kutspel2.view.GLGameView;
+import com.marktim.kutspel2.opengl.GLGameView;
 
 public class GameActivity extends Activity {
 
