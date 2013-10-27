@@ -3,7 +3,6 @@ package com.marktim.kutspel2.opengl;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
 
 import com.marktim.kutspel2.model.Spaceship;
