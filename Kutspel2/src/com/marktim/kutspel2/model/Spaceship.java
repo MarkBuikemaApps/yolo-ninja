@@ -60,4 +60,8 @@ public class Spaceship {
 		gl.glFrontFace(GL11.GL_CCW);
 	}
 
+	public void offset(float data) {
+		//TODO
+	}
+
 }

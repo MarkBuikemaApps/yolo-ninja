@@ -1,5 +1,8 @@
 package com.marktim.kutspel2.opengl;
 
+import java.util.Observable;
+import java.util.Observer;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
@@ -7,13 +10,12 @@ import android.opengl.GLSurfaceView.Renderer;
 
 import com.marktim.kutspel2.model.Spaceship;
 
-public class GLGameRenderer implements Renderer {
+public class GLGameRenderer implements Renderer, Observer{
 
 	private Spaceship spaceShip;
 
 	public GLGameRenderer() {
 		spaceShip = new Spaceship();
-
 	}
 
 	@Override
@@ -38,6 +40,7 @@ public class GLGameRenderer implements Renderer {
 		gl.glMatrixMode(GL10.GL_PROJECTION);
 		gl.glLoadIdentity();
 		gl.glFrustumf(-ratio, ratio, -1, 1, 1, 10);
+		
 	}
 
 	@Override
@@ -52,4 +55,10 @@ public class GLGameRenderer implements Renderer {
 		gl.glShadeModel(GL10.GL_SMOOTH);
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 	}
+
+	@Override
+	public void update(Observable observable, Object data) {
+		spaceShip.offset((Float)data);
+	}
+
 }
