@@ -34,7 +34,7 @@ public class GameActivity extends Activity {
 		HandlerThread ht = new HandlerThread("sensorThread");
 		ht.start();
 		Handler sensorHandler = new Handler(ht.getLooper());
-		sm.registerListener(gyroListener, sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD), 0, sensorHandler);
+		sm.registerListener(gyroListener, sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD), 1000000/60, sensorHandler);
 	}
 
 	public GLGameRenderer getRenderer() {
